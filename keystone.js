@@ -13,7 +13,7 @@ keystone.init({
 	'name': 'pwConnect',
 	'brand': 'pwConnect',
 
-	'less': 'public',
+    'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
@@ -38,6 +38,12 @@ keystone.set('locals', {
 	env: keystone.get('env'),
 	utils: keystone.utils,
 	editable: keystone.content.editable,
+});
+
+keystone.set('less options', {
+    render: {
+        javascriptEnabled: true
+    }
 });
 
 // Load your project's Routes
